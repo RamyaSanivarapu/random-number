@@ -8,12 +8,12 @@ buttonCheck.onclick=function(){
   let guessedNumber = parseInt(userInput.value);
 
   if (guessedNumber > randomNumber) {
-    gameResult.textContent = "Not Matched";
+    gameResult.textContent = "Too High / Not Matched";
     gameResult.style.backgroundColor = "#1e217c";
   }
   else if (guessedNumber < randomNumber) {
-    gameResult.textContent = "Not Matched";
-    gameResult.style.backgroundColor = "#1e217c";
+    gameResult.textContent = "Too Low/ Not matched";
+    gameResult.style.backgroundColor = "red";
   }
   else if (guessedNumber === randomNumber) {
     gameResult.textContent = "Good Work";
@@ -21,6 +21,7 @@ buttonCheck.onclick=function(){
   }
   else {
     gameResult.textContent = "Please provide a valid input.";
-    gameResult.style.backgroundColor = "#1e217c";
+    gameResult.style.backgroundColor = "yellow";
+    gameResult.style.color="black";
   }
 }
